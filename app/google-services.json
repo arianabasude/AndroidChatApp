@@ -1,0 +1,114 @@
+{
+  "project_info": {
+    "project_number": "517845068928",
+    "firebase_url": "https://fir-app-2f690.firebaseio.com",
+    "project_id": "fir-app-2f690",
+    "storage_bucket": "fir-app-2f690.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517845068928:android:af680fbf17926cbb",
+        "android_client_info": {
+          "package_name": "com.gayatribasude"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517845068928-9un2olnaks5rbspljff3facjledhnmge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAga6_5Z9g5mzsUSGDW3Af08pi14OpZwE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517845068928-9un2olnaks5rbspljff3facjledhnmge.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517845068928:android:f13d9d766e2315d1",
+        "android_client_info": {
+          "package_name": "com.urstrulygsw.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517845068928-e31bhmg4vfuq8h10fcg190jd76fomnme.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.urstrulygsw.chat",
+            "certificate_hash": "b3b2cb2ceff3483efe74e3b52cce875f8673e2e1"
+          }
+        },
+        {
+          "client_id": "517845068928-9un2olnaks5rbspljff3facjledhnmge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAga6_5Z9g5mzsUSGDW3Af08pi14OpZwE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517845068928-9un2olnaks5rbspljff3facjledhnmge.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517845068928:android:581099ef3921abc3",
+        "android_client_info": {
+          "package_name": "gayatribasude.com.loginappfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517845068928-8koi5lska4k6o5k08dcrboqj7jpl70f6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "gayatribasude.com.loginappfirebase",
+            "certificate_hash": "b3b2cb2ceff3483efe74e3b52cce875f8673e2e1"
+          }
+        },
+        {
+          "client_id": "517845068928-9un2olnaks5rbspljff3facjledhnmge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAga6_5Z9g5mzsUSGDW3Af08pi14OpZwE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517845068928-9un2olnaks5rbspljff3facjledhnmge.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
