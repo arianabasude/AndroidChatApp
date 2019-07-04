@@ -2,10 +2,18 @@ package com.urstrulygsw.chat;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+
+import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,7 +26,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.urstrulygsw.chat.frangments.ChatFragment;
+import com.urstrulygsw.chat.frangments.UserFragment;
 import com.urstrulygsw.chat.sampledata.User;
+
+import java.util.ArrayList;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -26,6 +38,7 @@ FirebaseUser firebaseUser;
 ImageView imgProfile;
 TextView txtDisplayUsername;
 DatabaseReference databaseReference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +49,8 @@ DatabaseReference databaseReference;
         txtDisplayUsername=findViewById(R.id.txtDisplayUsername);
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         databaseReference=FirebaseDatabase.getInstance().getReference("User").child(firebaseUser.getUid());
+
+
 
 
        databaseReference.addValueEventListener(new ValueEventListener() {
@@ -68,6 +83,21 @@ DatabaseReference databaseReference;
 
             }
         });
+
+
+        TabLayout tabLayout=findViewById(R.id.tabLayout);
+        ViewPager viewPager=findViewById(R.id.viewPager);
+        ViewPageAdapter viewPageAdapter=new ViewPageAdapter(getSupportFragmentManager());
+        viewPageAdapter.addFragment(new ChatFragment(),"Chats");
+        viewPageAdapter.addFragment(new UserFragment(),"Users");
+
+        //viewPager.setAdapter(viewPageAdapter);
+
+      // tabLayout.setupWithViewPager(viewPager);
+
+
+
+
 
 
 
@@ -112,7 +142,60 @@ DatabaseReference databaseReference;
 
 
 
-        }/*
+        }}
+
+        class ViewPageAdapter extends FragmentPagerAdapter {
+
+        private ArrayList<Fragment> fragmentArrayList;
+        private ArrayList<String> stringArrayList;
+
+
+            public ViewPageAdapter(FragmentManager fm) {
+                super(fm);
+                this.fragmentArrayList=new ArrayList<>();
+                this.stringArrayList=new ArrayList<>();
+
+
+
+            }
+
+            @Override
+            public Fragment getItem(int i) {
+                return fragmentArrayList.get(i);
+            }
+
+            @Override
+            public int getCount() {
+                return fragmentArrayList.size();
+            }
+
+            public void addFragment(Fragment fragment,String title){
+                fragmentArrayList.add(fragment);
+                stringArrayList.add(title);
+            }
+
+            @Nullable
+            @Override
+            public CharSequence getPageTitle(int position) {
+                return stringArrayList.get(position);
+
+            }
+        }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+        /*
 
     }
 
@@ -171,5 +254,5 @@ DatabaseReference databaseReference;
         });*/
 
 
-    }
-}
+
+
