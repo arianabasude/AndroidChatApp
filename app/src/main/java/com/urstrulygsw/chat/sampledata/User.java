@@ -2,29 +2,35 @@ package com.urstrulygsw.chat.sampledata;
 
 public class User {
 
-    private int intId;
-    private String strUsername;
-    private String strImageUrl;
+    private String id;
+    private String imageUrl;
+    private String username;
 
 
     public User() {
     }
 
-    public User(int intId, String strUsername, String strImageUrl) {
-        this.intId = intId;
-        this.strUsername = strUsername;
-        this.strImageUrl = strImageUrl;
+    public String getId() {
+        return id;
     }
 
-    public int getIntId() {
-        return intId;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getStrUsername() {
-        return strUsername;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
-    public String getStrImageUrl() {
-        return strImageUrl;
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public String getUsername() {
+        return username;
     }
 }

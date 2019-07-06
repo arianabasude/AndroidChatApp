@@ -57,7 +57,7 @@ DatabaseReference databaseReference;
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                User user=dataSnapshot.getValue(User.class);
+               //User user=dataSnapshot.getValue(User.class);
                 txtDisplayUsername.setText(dataSnapshot.child("username").getValue().toString());
                 //txtDisplayUsername.setText(user.getStrUsername());
 
@@ -65,7 +65,7 @@ DatabaseReference databaseReference;
                     imgProfile.setImageResource(R.mipmap.ic_launcher);
                 }
                 else{
-                    Glide.with(Main2Activity.this).load(user.getStrImageUrl()).into(imgProfile);
+                    //Glide.with(Main2Activity.this).load(user.getStrImageUrl()).into(imgProfile);
                 }
 
                /* if(user.getStrImageUrl().equals("default")){
@@ -91,9 +91,9 @@ DatabaseReference databaseReference;
         viewPageAdapter.addFragment(new ChatFragment(),"Chats");
         viewPageAdapter.addFragment(new UserFragment(),"Users");
 
-        //viewPager.setAdapter(viewPageAdapter);
+        viewPager.setAdapter(viewPageAdapter);
 
-      // tabLayout.setupWithViewPager(viewPager);
+      tabLayout.setupWithViewPager(viewPager);
 
 
 
