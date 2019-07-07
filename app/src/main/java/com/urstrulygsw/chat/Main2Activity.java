@@ -57,11 +57,11 @@ DatabaseReference databaseReference;
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-               //User user=dataSnapshot.getValue(User.class);
-                txtDisplayUsername.setText(dataSnapshot.child("username").getValue().toString());
-                //txtDisplayUsername.setText(user.getStrUsername());
+               User user=dataSnapshot.getValue(User.class);
+               // txtDisplayUsername.setText(dataSnapshot.child("username").getValue().toString());
+                txtDisplayUsername.setText(user.getUsername());
 
-                if(dataSnapshot.child("imageUrl").getValue().toString().equals("default")){
+                if(user.getImageUrl().equals("default")){
                     imgProfile.setImageResource(R.mipmap.ic_launcher);
                 }
                 else{
